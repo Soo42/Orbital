@@ -81,7 +81,7 @@ Ultimately, we aim to create a platform that enhances student life by integratin
 * Users can key in things or topics that they are interested in, this will be another criteria where users will be matched based on.
 * Interests of a user can also be displayed on their profile.
 
-    4.5. Residential matching (extension)
+## 4.5. Residential matching (extension)
 
 * Users can key in their dormitory or residence location, this is another criteria that users will be matched based on.
 * This is when specific university infrastructure will be used as each campus will have different dormitory buildings and locations.
