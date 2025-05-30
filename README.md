@@ -25,7 +25,7 @@ We saw this as another opportunity to leverage our app. Since we have collected 
 # 2.  Aim
 
 
-# Our aim is to help those who face challenges when it comes to finding meaningful connections in university. By automating much of the initial process, we hope to match people who are more likely to get along well and have a long-lasting friendship. In doing so, we hope that the issue of student loneliness can be reduced, leading to better mental health of university students. To do this, we aim to develop a university-specific networking app and an algorithm that matches each person with the most suitable people. 
+Our aim is to help those who face challenges when it comes to finding meaningful connections in university. By automating much of the initial process, we hope to match people who are more likely to get along well and have a long-lasting friendship. In doing so, we hope that the issue of student loneliness can be reduced, leading to better mental health of university students. To do this, we aim to develop a university-specific networking app and an algorithm that matches each person with the most suitable people. 
 
 Additionally, our app also aims to provide a smarter and more effective channel for promoting campus events by tailoring event suggestions to each student’s stated interests. This targeted approach benefits both students and event organisers: students receive more relevant opportunities without being overwhelmed by irrelevant notifications, while organisers enjoy higher engagement and more efficient outreach.
 
@@ -131,16 +131,16 @@ Ultimately, we aim to create a platform that enhances student life by integratin
 
 
 1. Milestone 1 - Technical proof of concept (2 June)
-    1. User profile and input timetable/classes feature done for one class and profile
+    - User profile and input timetable/classes feature done for one class and profile
 2. Milestone 2 - Prototype (30 June)
-    2. Get the matching system to work for more users and classes
-    3. Basic UI for displaying matches 
-    4. Basic messaging system
-    5. Basic detection scheme
+    - Get the matching system to work for more users and classes
+    - Basic UI for displaying matches 
+    - Basic messaging system
+    - Basic detection scheme
 3. Milestone 3 - Extended system (28 July)
-1. Support for more classes 
-2. Improved UI 
-3. Extend to interests, dormitory location feature, events, leaderboard, streak and memories
+    -  Support for more classes 
+    -  Improved UI 
+    -  Extend to interests, dormitory location feature, events, leaderboard, streak and memories
 
 
 # 6. Tech Stack
