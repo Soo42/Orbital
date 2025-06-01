@@ -1,78 +1,83 @@
-/* UserProfile.css */
+/* UserProfile.css - Compact Version */
 
 .user-profile-container {
-    width: 100vw;
-    height: 100vh;
-    padding: 2rem;
-    box-sizing: border-box;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    background-color: #f5f7fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-  }
-  
-  .avatar-section {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .avatar {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(36, 36, 36, 0.845);
-    margin-bottom: 0.5rem;
-  }
-  
-  .location {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .bio {
-    max-width: 600px;
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-  
-  .stats {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  
-  .interests-section,
-  .classes-section {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .interests-list,
-  .classes-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding-left: 0;
-    list-style: none;
-  }
-  
-  .interest-item,
-  .class-item {
-    background-color: rgba(36, 36, 36, 0.845);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    user-select: none;
-    cursor: default;
-  }
-  
+
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+}
+
+.avatar-section {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(36, 36, 36, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.bio {
+  max-width: 280px;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.interests-section,
+.classes-section {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 1.2rem;
+}
+
+.interests-list,
+.classes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-left: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.interest-item,
+.class-item {
+  background-color: rgba(36, 36, 36, 0.85);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  user-select: none;
+  cursor: default;
+}

@@ -28,7 +28,7 @@ const UserProfile: React.FC<UserProfileProps> = ({
     <div className="user-profile-container">
       <div className="avatar-section">
         <img src={avatarUrl} alt={`${username}'s avatar`} className="avatar" />
-        <h2>{name || username}</h2>
+        <h2>{name ? `${name} (@${username})` : username}</h2>
         {location && <p className="location">{location}</p>}
       </div>
 
