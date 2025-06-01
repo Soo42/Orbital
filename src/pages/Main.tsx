@@ -32,7 +32,7 @@ function Main({ user }: MainProps) {
     name: "LiNkUS",
     username: "LiNkUS",
     bio: "hello, this is a test",
-    avatarUrl: "/assets/img/LiNkUS.jpeg",
+    avatarUrl: "/assets/img/ProfilePictureBlank.png",
     location: "Kent Ridge Hall",
     streak: 4,
     connections: 12,
