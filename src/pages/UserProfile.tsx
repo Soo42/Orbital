@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserProfile.css";
+import EditUserProfile from "./EditUserProfile";
 
-interface UserProfileProps {
+export interface UserProfileProps {
   name?: string;
   username: string;
   bio?: string;
@@ -9,65 +10,95 @@ interface UserProfileProps {
   location?: string;
   interests?: string[];
   classes?: string[];
-  streak?: number;
-  connections?: number;
 }
 
 const UserProfile: React.FC<UserProfileProps> = ({
-  name,
+  name = "",
   username,
-  bio,
+  bio = "",
   avatarUrl,
-  location,
+  location = "",
   interests = [],
   classes = [],
-  streak = 0,
-  connections = 0,
 }) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [profile, setProfile] = useState<UserProfileProps>({
+    name,
+    username,
+    bio,
+    avatarUrl,
+    location,
+    interests,
+    classes,
+  });
+
+  const handleSave = (updatedProfile: UserProfileProps) => {
+    setProfile(updatedProfile);
+    setIsEditing(false);
+    localStorage.setItem("userProfile", JSON.stringify(updatedProfile));
+  };
+
+  const handleCancel = () => {
+    setIsEditing(false);
+  };
+
+  if (isEditing) {
+    return (
+      <EditUserProfile
+        {...profile}
+        onSave={handleSave}
+        onCancel={handleCancel}
+      />
+    );
+  }
+
   return (
     <div className="user-profile-container">
       <div className="avatar-section">
-        <img src={avatarUrl} alt={`${username}'s avatar`} className="avatar" />
-        <h2>{name ? `${name} (@${username})` : username}</h2>
-        {location && <p className="location">{location}</p>}
+        <img
+          src={profile.avatarUrl}
+          alt={`${profile.username}'s avatar`}
+          className="avatar"
+        />
+        <h2>{profile.name || profile.username}</h2>
+        <p className="location">@{profile.username}</p>
       </div>
 
-      {bio && <p className="bio">{bio}</p>}
+      {profile.bio && (
+        <p className="bio">{profile.bio}</p>
+      )}
 
-      <div className="stats">
-        <div>
-          <strong>Streaks:</strong> {streak}
-        </div>
-        <div>
-          <strong>Connections:</strong> {connections}
-        </div>
-      </div>
+      {profile.location && (
+        <p className="location">{profile.location}</p>
+      )}
 
-      {interests.length > 0 && (
+      {profile.interests && profile.interests.length > 0 && (
         <div className="interests-section">
           <h3>Interests</h3>
           <ul className="interests-list">
-            {interests.map((interest, idx) => (
-              <li key={idx} className="interest-item">
-                {interest}
-              </li>
+            {profile.interests.map((interest, idx) => (
+              <li key={idx} className="interest-item">{interest}</li>
             ))}
           </ul>
         </div>
       )}
 
-      {classes.length > 0 && (
+      {profile.classes && profile.classes.length > 0 && (
         <div className="classes-section">
           <h3>Classes</h3>
           <ul className="classes-list">
-            {classes.map((cls: string, idx: number) => (
-              <li key={idx} className="class-item">
-                {cls}
-              </li>
+            {profile.classes.map((cls, idx) => (
+              <li key={idx} className="class-item">{cls}</li>
             ))}
           </ul>
         </div>
       )}
+
+      <div style={{ marginTop: "2rem", textAlign: "center" }}>
+        <button onClick={() => setIsEditing(true)} style={{ padding: "0.5rem 1rem" }}>
+          Edit Profile
+        </button>
+      </div>
     </div>
   );
 };

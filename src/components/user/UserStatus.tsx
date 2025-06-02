@@ -4,7 +4,10 @@ type UserStatusProps = {
   };
   
 function UserStatus({ name, status }: UserStatusProps) {
-    return;
+    return <div className="user-status">
+        <span className="user-name">{name}</span>
+        <span className="user-status">{status}</span>
+    </div>;
 }
 
 export default UserStatus;
