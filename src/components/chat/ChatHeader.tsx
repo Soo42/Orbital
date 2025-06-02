@@ -7,7 +7,10 @@ type ChatHeaderProps = {
 };
   
 function ChatHeader({ name }: ChatHeaderProps) {
-    return;
+    return <div className="chat-header">
+        <h2>{name}</h2>
+        <UserStatus name={name} status="online" />
+    </div>;
 }
 
 export default ChatHeader;

@@ -2,8 +2,11 @@ import "./App.css";
 
 import { useState, useEffect } from "react";
 import { createClient, Session } from "@supabase/supabase-js";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
+import UserProfile from "./pages/UserProfile";
+import Events from "./pages/Events";
 
 export const supabase = createClient(
   "https://xytvpdkxrzbiykufavpy.supabase.co",
@@ -30,6 +33,12 @@ export default function App() {
   if (!session) {
     return <Login />;
   } else {
-    return <Main user={session.user} />;
-  }
+  return(
+      <Routes>
+        <Route path="/main" element={<Main user={session.user} />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="*" element={<Navigate to="/main" />} />
+      </Routes>
+  );}
 }

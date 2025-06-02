@@ -1,12 +1,18 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import ChatHeader from "../chat/ChatHeader";
 import MessageBubble from "../chat/MessageBubble";
 import Message from "../chat/Message";
 import TypingIndicator from "../shared/TypingIndicator";
 import { JSX } from "react";
 
-function ChatBox(): JSX.Element {
-    return <div>{}</div>;
+interface ChatBoxProps {
+  selectedFriendId: string | null;
+}
+
+function ChatBox({ selectedFriendId }: ChatBoxProps): JSX.Element {
+    return <div>
+        <Message/>
+    </div>;
 }
 
 export default ChatBox;

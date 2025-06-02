@@ -41,6 +41,15 @@ function Login() {
         <div style={{ maxWidth: "400px" }}>
           <Auth
             supabaseClient={supabase}
+            view="sign_up"
+            localization={{
+              variables: {
+                sign_in: {
+                  email_label: 'Email address(xxx@gmail.com)',
+                  password_label: 'Create a password (8 characters minimum)',
+                },
+              },
+            }}
             appearance={{ 
               theme: ThemeSupa, 
               variables: {
@@ -69,8 +78,7 @@ function Login() {
             providers={["google", "github", "apple"]}
             queryParams={{
               access_type: 'offline',
-              prompt: 'consent',
-              hd: 'domain.com',
+              prompt: 'consent'
             }} // specify providers
           />
         </div>
