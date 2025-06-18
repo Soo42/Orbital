@@ -1,0 +1,44 @@
+.events-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw - 60px; /* Adjusted for sidebar width */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 60px; 
+  background-color: #000000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.events-container {
+  width: 100vw;
+  height: 100vh; /* Adjusted for header height */
+  overflow: hidden;
+
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5f7fa;
+
+  border-radius: 0;
+  box-shadow: none;
+}

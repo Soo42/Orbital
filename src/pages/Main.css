@@ -1,0 +1,14 @@
+#logout {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+}
+
+.icon{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+}
